@@ -1,48 +1,102 @@
-<div class="desktopHide">
-	<div class="header-top">
-		<center>
-			<div class="container">
-			<h1 class="header-text""><%= I18n.t "landing1" %><br />
-			 <%= I18n.t "landing2" %> <span style="color:#00644f"><%= I18n.t "landing3" %>.</span></h1>
-			 <div style="width: 65%; color:#616161"><%= I18n.t "landing4" %>.</div>
-		</div>
-		<%= image_tag '/landing3.png' %></center>
-	</div>
-</div>
+<% ab_test "test", "pictures", "nopictures" do |style| %>
+	<div class="test_<%= style %>">
+		<% if style == "pictures" %>
+			<div class="desktopHide">
+				<div class="header-top">
+					<center>
+						<div class="container">
+						<h1 class="header-text""><%= I18n.t "landing1" %><br />
+						 <%= I18n.t "landing2" %> <span style="color:#00644f"><%= I18n.t "landing3" %>.</span></h1>
+						 <div style="width: 65%; color:#616161"><%= I18n.t "landing4" %>.</div>
+					</div>
+					<%= image_tag '/landing3.png' %></center>
+				</div>
+			</div>
 
-<div class="desktopHide">
-	<div class="header-top">
-		<center>
-			<div class="container">
-			<h1 class="header-text""><%= I18n.t "landing5" %><br />
-			 <%= I18n.t "landing6" %> <span style="color:#00644f"><%= I18n.t "landing7" %>.</span></h1>
-			<%= I18n.t "landing8" %>.
-		</div>
-		<%= image_tag '/landing2.png' %></center>
-	</div>
-</div>
+			<div class="desktopHide">
+				<div class="header-top">
+					<center>
+						<div class="container">
+						<h1 class="header-text""><%= I18n.t "landing5" %><br />
+						 <%= I18n.t "landing6" %> <span style="color:#00644f"><%= I18n.t "landing7" %>.</span></h1>
+						<%= I18n.t "landing8" %>.
+					</div>
+					<%= image_tag '/landing2.png' %></center>
+				</div>
+			</div>
 
-<div class="mobileHide">
-	<div class="header-top">
-		<center>
-			<div class="container">
-			<h1 class="header-text""><%= I18n.t "landing1" %><br />
-			 <%= I18n.t "landing2" %> <span style="color:#00644f"><%= I18n.t "landing3" %>.</span></h1>
-			<%= I18n.t "landing4" %>.
-		</div>
-		<%= image_tag '/landing3.png' %></center>
-	</div>
-</div>
+			<div class="mobileHide">
+				<div class="header-top">
+					<center>
+						<div class="container">
+						<h1 class="header-text""><%= I18n.t "landing1" %><br />
+						 <%= I18n.t "landing2" %> <span style="color:#00644f"><%= I18n.t "landing3" %>.</span></h1>
+						<%= I18n.t "landing4" %>.
+					</div></center>
+				</div>
+			</div>
 
 
-<div class="mobileHide">
-	<div class="header-top">
-		<center>
-			<div class="container">
-			<h1 class="header-text""><%= I18n.t "landing5" %><br />
-			 <%= I18n.t "landing6" %> <span style="color:#00644f"><%= I18n.t "landing7" %>.</span></h1>
-			<%= I18n.t "landing8" %>.
-		</div>
-		<%= image_tag '/landing2.png' %></center>
+			<div class="mobileHide">
+				<div class="header-top">
+					<center>
+						<div class="container">
+						<h1 class="header-text""><%= I18n.t "landing5" %><br />
+						 <%= I18n.t "landing6" %> <span style="color:#00644f"><%= I18n.t "landing7" %>.</span></h1>
+						<%= I18n.t "landing8" %>.</center>
+				</div>
+			</div>
+		<% end %>
+
+		<% if style == "nopictures" %>
+			<div class="desktopHide">
+				<div class="header-top">
+					<center>
+						<div class="container">
+						<h1 class="header-text""><%= I18n.t "landing1" %><br />
+						 <%= I18n.t "landing2" %> <span style="color:#00644f"><%= I18n.t "landing3" %>.</span></h1>
+						 <div style="width: 65%; color:#616161"><%= I18n.t "landing4" %>.</div>
+					</div></center>
+				</div>
+			</div>
+
+			<div class="desktopHide">
+				<div class="header-top">
+					<center>
+						<div class="container">
+						<h1 class="header-text""><%= I18n.t "landing5" %><br />
+						 <%= I18n.t "landing6" %> <span style="color:#00644f"><%= I18n.t "landing7" %>.</span></h1>
+						<%= I18n.t "landing8" %>.
+					</center>
+				</div>
+			</div>
+
+			<div class="mobileHide">
+				<div class="header-top">
+					<center>
+						<div class="container">
+						<h1 class="header-text""><%= I18n.t "landing1" %><br />
+						 <%= I18n.t "landing2" %> <span style="color:#00644f"><%= I18n.t "landing3" %>.</span></h1>
+						<%= I18n.t "landing4" %>.
+					</div>
+					<%= image_tag '/landing3.png' %>
+				</center>
+				</div>
+			</div>
+
+
+			<div class="mobileHide">
+				<div class="header-top">
+					<center>
+						<div class="container">
+						<h1 class="header-text""><%= I18n.t "landing5" %><br />
+						 <%= I18n.t "landing6" %> <span style="color:#00644f"><%= I18n.t "landing7" %>.</span></h1>
+						<%= I18n.t "landing8" %>.
+					</div>
+					<%= image_tag '/landing2.png' %>
+				</center>
+				</div>
+			</div>
+		<% end %>
 	</div>
-</div>
+<% end %>

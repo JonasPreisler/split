@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root to: 'pages#landing'
+  get '/landing', to: 'pages#landing'
   scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
     resources :property_images
     resources :properties
@@ -26,4 +27,5 @@ Rails.application.routes.draw do
     get '/:messenger_user_id/tid', to: 'leads#broadcast'
     #get '/:user', to: 'properties#show'
   end
+  mount Split::Dashboard, at: 'split'
 end

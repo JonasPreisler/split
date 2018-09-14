@@ -7,6 +7,7 @@ class LeadsController < ApplicationController
   # GET /leads.json
   def index
     @leads = Lead.all
+    ab_finished(:test, reset: false)
   end
 
   # GET /leads/1

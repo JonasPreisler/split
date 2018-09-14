@@ -11,15 +11,15 @@ default: &default
 
 development:
   <<: *default
-  database: viachat_forsikring_dev
+  database: split_dev
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: viachat_forsikring_test
+  database: split_test
 
 production:
   <<: *default
-  database: viachat_forsikring_prod
+  database: split_prod
