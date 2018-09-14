@@ -3,6 +3,7 @@
   "private": true,
   "dependencies": {},
   "scripts": {
-  "install": "node server.js"
+  "install": "cd client && npm run build && cd ..",
+  "start": "node server.js"
   }
 }
