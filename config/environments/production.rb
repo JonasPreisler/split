@@ -94,5 +94,5 @@ Rails.application.configure do
   ENV["REDISTOGO_URL"] = 'redis://username:password@my.host:6789'
   # Initialize the Rails application.
   Rails.application.initialize!
-  config.gem 'redis' 
+  
 end
