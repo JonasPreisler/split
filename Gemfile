@@ -45,7 +45,7 @@ gem 'carrierwave', '~> 1.0'
 gem 'fog'
 gem "cocoon"
 gem 'split', require: 'split/dashboard'
-
+gem 'redis'
 
 gem 'bootsnap', '>= 1.1.0', require: false
 
