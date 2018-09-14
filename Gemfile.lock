@@ -540,7 +540,6 @@ DEPENDENCIES
   puma (~> 3.11)
   rails (~> 5.2.0)
   rails_admin
-  redis
   route_downcaser
   rspec (~> 3.7)
   sass-rails (~> 5.0)
