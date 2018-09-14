@@ -4,6 +4,7 @@
   "dependencies": {},
   "scripts": {
   "install": "cd client && npm run build && cd ..",
-  "start": "node server.js"
+  "start": "node server.js",
+  "node": "8.9.4"
   }
 }
