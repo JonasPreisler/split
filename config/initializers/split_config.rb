@@ -8,3 +8,5 @@ Split.configure do |config|
   #config.reset_manually = false ## if true, it never resets the experiment data, even if the configuration changes
   config.include_rails_helper = true
 end
+Split::Dashboard.use Rack::Auth::Basic do |username, password|
+	username == 'admin' && password == "hej"
