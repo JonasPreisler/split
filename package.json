@@ -1,9 +1,6 @@
 {
   "name": "ebot",
   "private": true,
-  "dependencies": {}
-}
-
-"scripts": {
-    "start": "node your-script.js"
+  "dependencies": {},
+  "start": "node your-script.js"
 }
