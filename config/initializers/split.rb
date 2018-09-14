@@ -11,3 +11,18 @@ end
 Split::Dashboard.use Rack::Auth::Basic do |username, password|
 	username == 'admin' && password == "hej"
 end
+
+if ENV["REDISTOGO_URL"]
+   uri = URI.parse(ENV["REDISTOGO_URL"])
+   namespace = ["split", "myapp", Rails.env].join(":")
+
+   redis = Redis.new(host: uri.host,
+                     port: uri.port,
+                     password: uri.password,
+                     thread_safe: true
+                    )
+
+   redis_namespace = Redis::Namespace.new(namespace, redis: redis)
+
+   Split.redis = redis_namespace
+end
