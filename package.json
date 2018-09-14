@@ -3,7 +3,7 @@
   "private": true,
   "dependencies": {},
   "scripts": {
-    "start": "node --version"
+    "start": "node app.js"
   },
   "engines": {
     "node": "10.10.0",
