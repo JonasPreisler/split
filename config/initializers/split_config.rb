@@ -11,5 +11,3 @@ end
 Split::Dashboard.use Rack::Auth::Basic do |username, password|
 	username == 'admin' && password == "hej"
 end
-
-Split.redis = REDIS
