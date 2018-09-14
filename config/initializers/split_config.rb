@@ -10,3 +10,4 @@ Split.configure do |config|
 end
 Split::Dashboard.use Rack::Auth::Basic do |username, password|
 	username == 'admin' && password == "hej"
+end
