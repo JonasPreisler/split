@@ -1,5 +1,4 @@
-"scripts": {
-  "start": "node your-script.js",
+{
   "name": "ebot",
   "private": true,
   "dependencies": {}
