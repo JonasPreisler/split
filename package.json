@@ -1,5 +1,12 @@
 {
   "name": "ebot",
   "private": true,
-  "dependencies": {}
+  "dependencies": {},
+  "scripts": {
+    "start": "node --version"
+  },
+  "engines": {
+    "node": "10.10.0",
+    "npm": "6.4.1"
+  }
 }
