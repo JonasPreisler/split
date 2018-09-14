@@ -1,7 +1,6 @@
 "scripts": {
   "start": "node server.js"
-}
-
+},
 {
   "name": "ebot",
   "private": true,
