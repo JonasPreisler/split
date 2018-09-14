@@ -1,3 +1,4 @@
+"scripts": { "start": "server.js" },
 {
   "name": "ebot",
   "private": true,
