@@ -1,5 +1,6 @@
 "scripts": { "start": "server.js" },
 {
+  "start": "server.js",
   "name": "ebot",
   "private": true,
   "dependencies": {}
